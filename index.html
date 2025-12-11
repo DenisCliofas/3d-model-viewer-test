@@ -1,1 +1,41 @@
-<model-viewer src="Monkey.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="2" shadow-softness="0.69"> </model-viewer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Model Viewer</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    model-viewer {
+      width: 100%;
+      max-width: 600px;
+      height: 80vh;
+    }
+  </style>
+</head>
+<body>
+  <!-- Replace the src attribute with your model's URL (e.g. GitHub raw link) -->
+  <model-viewer
+    src="model.glb"
+    alt="3D Model"
+    auto-rotate
+    camera-controls
+    ar
+    ar-modes="scene-viewer quick-look webxr"
+    shadow-intensity="1"
+  ></model-viewer>
+
+  <p>Scan this page's URL with your phone to view the 3D model.</p>
+</body>
+</html>
